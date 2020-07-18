@@ -12,6 +12,7 @@
                   Badge
                   Breadcrumb
                   Breadcrumb.Item
+                  Breadcrumb.Separator
                   Button
                   Button.Group
                   Calendar
@@ -78,7 +79,6 @@
                   Select
                   Select.OptGroup
                   Select.Option
-                  Separator
                   Skeleton
                   Slider
                   Spin
