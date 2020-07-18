@@ -1,6 +1,9 @@
 # Changelog
 
-## 3.26.6-0
+## 3.26.17-0
+* Updated antd library to [3.26.17](https://github.com/ant-design/ant-design/blob/3.x-stable/CHANGELOG.en-US.md#32617)
+
+## 3.26.12-0
 * Updated antd library to [3.26.12](https://github.com/ant-design/ant-design/blob/3.x-stable/CHANGELOG.en-US.md#32612)
 
 ## 3.26.6-0
