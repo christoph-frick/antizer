@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.26.17-1
+* Add detection for daiquiri replacing sablono since rum 0.12
+
 ## 3.26.17-0
 * Updated antd library to [3.26.17](https://github.com/ant-design/ant-design/blob/3.x-stable/CHANGELOG.en-US.md#32617)
 

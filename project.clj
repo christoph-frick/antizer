@@ -1,4 +1,4 @@
-(defproject net.ofnir/antizer "3.26.17-0"
+(defproject net.ofnir/antizer "3.26.17-1"
   :description "Antizer"
   :url "https://github.com/christoph-frick/antizer"
   :license {:name "Eclipse Public License"

@@ -5,7 +5,9 @@
             [rum.core])
   (:require-macros [antizer.macros 
                     :refer [export-form-funcs export-funcs 
-                            export-props export-rum-components]]))
+                            export-props export-rum-components]]
+                   [antizer.rum-macros
+                    :refer [interpret]]))
 
 ;; adapted from https://github.com/tonsky/rum/issues/20
 (defn adapt-class [react-class & args]
@@ -16,17 +18,17 @@
         ;; we have to make sure to check if the children is sequential 
         ;; as a list can be returned, eg: from a (for)
         new-children (if (sequential? type#)
-                       [(sablono.interpreter/interpret children)]
+                       [(interpret children)]
                        children)
         ;; convert any options key value to a react element, if
-        ;; a valid html element tag is used, using sablono
+        ;; a valid html element tag is used, using sablono/daiquiri
         vector->react-elems (fn [[key val]]
                               (if (sequential? val)
-                                [key (sablono.interpreter/interpret val)]
+                                [key (interpret val)]
                                 [key val]))
         new-options (into {} (map vector->react-elems opts))]
     (apply js/React.createElement react-class
-      ;; sablono html-to-dom-attrs does not work for nested hashmaps
+      ;; sablono/daiquiri html-to-dom-attrs does not work for nested hashmaps
       (clj->js (ant/map-keys->camel-case new-options :html-props true)) 
       new-children)))
 
